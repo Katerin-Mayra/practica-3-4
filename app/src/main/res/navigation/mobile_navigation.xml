@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.practica34.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_images"
+            app:destination="@id/nav_images" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_images"
+        android:name="com.example.practica34.ui.home.ImagesFragment"
+        android:label="Images"
+        tools:layout="@layout/fragment_images" >
+        <action
+            android:id="@+id/action_nav_images_to_nav_details"
+            app:destination="@id/nav_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.example.practica34.ui.home.DetailsImagesFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details_images" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.practica34.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.practica34.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
